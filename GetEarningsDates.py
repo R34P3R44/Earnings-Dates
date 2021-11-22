@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 def GetEarningsDates():
     headers = {
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0',
     }
     url = 'https://www.marketwatch.com/tools/earningscalendar'
     print('Connecting to marketwatch.com')
@@ -20,10 +20,9 @@ def GetEarningsDates():
 
     dfs = {}
     current_datetime = datetime.datetime.now().strftime('%m-%d-%y %H_%M_%S')
-    writer = pd.ExcelWriter('Earnings Calendar.xlsx',
+    writer = pd.ExcelWriter('Earning Calendar ({0}).xlsx',
                             engine='xlsxwriter',
                             engine_kwargs={'options': {'strings_to_numbers': False}})
-
 
     for earning_table in earning_tables:
         if not 'Sorry, this date currently does not have any earnings announcements scheduled' in earning_table.text:
@@ -38,4 +37,3 @@ def GetEarningsDates():
     print('File exported ;)')
                         
 GetEarningsDates()
-
