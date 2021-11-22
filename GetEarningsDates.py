@@ -9,3 +9,9 @@ def GetEarningsDates():
     }
     url = 'https://www.marketwatch.com/tools/earningscalendar'
     print('Connecting to marketwatch.com')
+
+    response = requests.get(url, headers=headers)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    print('Getting content')
+
+    
