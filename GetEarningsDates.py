@@ -25,3 +25,17 @@ def GetEarningsDates():
                             engine_kwargs={'options': {'strings_to_numbers': False}})
 
 
+    for earning_table in earning_tables:
+        if not 'Sorry, this date currently does not have any earnings announcements scheduled' in earning_table.text:
+            earning_date = earning_table['id'].replace('page', '')
+            earning_date = earning_date[:3] + '_' + earning_date[3:]
+            print(earning_date)
+            dfs[earning_date] = pd.read_html(str(earning_table.table))[0]
+            dfs[earning_date].to_excel(writer, sheet_name=earning_date, index=False)
+    print('Beautifying data')
+            
+    writer.save()
+    print('File exported ;)')
+                        
+
+
