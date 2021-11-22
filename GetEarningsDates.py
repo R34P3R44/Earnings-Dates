@@ -18,3 +18,10 @@ def GetEarningsDates():
     earning_tables = tabpane.find_all('div', {'id': True})
     print('Searching for data')
 
+    dfs = {}
+    current_datetime = datetime.datetime.now().strftime('%m-%d-%y %H_%M_%S')
+    writer = pd.ExcelWriter('Earnings Calendar.xlsx',
+                            engine='xlsxwriter',
+                            engine_kwargs={'options': {'strings_to_numbers': False}})
+
+
