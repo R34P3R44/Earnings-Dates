@@ -14,4 +14,7 @@ def GetEarningsDates():
     soup = BeautifulSoup(response.content, 'html.parser')
     print('Getting content')
 
-    
+    tabpane = soup.find('div', 'tabpane')
+    earning_tables = tabpane.find_all('div', {'id': True})
+    print('Searching for data')
+
