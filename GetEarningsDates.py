@@ -37,5 +37,5 @@ def GetEarningsDates():
     writer.save()
     print('File exported ;)')
                         
-
+GetEarningsDates()
 
