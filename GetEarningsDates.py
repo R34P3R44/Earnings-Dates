@@ -20,7 +20,7 @@ def GetEarningsDates():
 
     dfs = {}
     current_datetime = datetime.datetime.now().strftime('%m-%d-%y %H_%M_%S')
-    writer = pd.ExcelWriter('Earnings Calendar.xlsx',
+    writer = pd.ExcelWriter('Earning Calendar ({0}).xlsx',
                             engine='xlsxwriter',
                             engine_kwargs={'options': {'strings_to_numbers': False}})
 
