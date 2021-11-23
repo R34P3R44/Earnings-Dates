@@ -1,6 +1,7 @@
 # Earnings_Dates
 
 This is a command line app written in python which you can use to check for upcoming earnings dates for all stocks from marketwatch.com. I was using python 3.7.9 for this project in VS code on Mac Os Monterey 12.0.1.
+I have also have the below project availabe as an executable software. Drop me a line if you are interested. 
 
 ## How to use
 
