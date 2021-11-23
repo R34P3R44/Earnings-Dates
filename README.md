@@ -12,18 +12,21 @@ git clone <https://github.com/R34P3R44/Earnings-Dates.git>
 
 2. Cd into the project folder.
 
-```
+
 Install packages for python;
-- datetime
-- pandas
-- requests
-- beautifulsoup
+
+```
+pip3 install datetime
+pip3 install pandas
+pip3 install requests
+pip3 install beautifulsoup4
 ```
 
 3. Run python project in code editor or terminal;
 
-```
 - from editor, you should have a "play" button lookalike thingy somewhere
 
-- from terminal run the following code: python3 GetEarningsDates.py
+- from terminal run the following code:
+```
+ python3 GetEarningsDates.py
 ```
